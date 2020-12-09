@@ -47,9 +47,9 @@ class House
   end
 
   def rooms_sorted_by_area
-    room_areas = @rooms.map do |room|
+    rooms_large_to_small = @rooms.sort_by do |room|
       room.area
     end
-    
+    rooms_large_to_small.reverse
   end
 end
